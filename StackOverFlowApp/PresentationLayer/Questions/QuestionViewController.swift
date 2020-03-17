@@ -28,7 +28,8 @@ class QuestionViewController: UIViewController {
         NetworkManager.shared.getQuestions { [weak self] (questions, error) in
             if error?.isEmpty ?? true {
                 DispatchQueue.main.async {
-                    self?.saveQuestionsToDb(questions: questions?.items)
+                    DatabaseManager.shared.saveQuestionsToDb(questions: questions?.items)
+                    self?.questions = questions!.items
                     self?.questionResponseTable.reloadData()
                 }
             }
@@ -68,78 +69,14 @@ extension QuestionViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 @available(iOS 10.0, *)
-extension QuestionViewController {
-    func saveQuestionsToDb(questions: [Question]?) {
-        if let questions = questions {
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                return
-            }
-            let managedContext = appDelegate.persistentContainer.viewContext
-            let entity = NSEntityDescription.entity(forEntityName: "Questions", in: managedContext)!
-            
-            for index in 0..<questions.count {
-                let questionsContext = NSManagedObject(entity: entity, insertInto: managedContext)
-                questionsContext.setValue(questions[index].questionId, forKeyPath: "question_id")
-                questionsContext.setValue(questions[index].owner.profileImage, forKeyPath: "profile_image")
-                questionsContext.setValue(questions[index].tags.joined(separator: ", "), forKeyPath: "tags")
-                questionsContext.setValue(questions[index].title, forKeyPath: "title")
-                questionsContext.setValue(questions[index].owner.displayName, forKeyPath: "display_name")
-            }
-            
-            do {
-                try managedContext.save()
-            } catch let error as NSError {
-                print("Could not save. \(error), \(error.userInfo)")
-            }
-        }
-    }
-}
-
-@available(iOS 10.0, *)
 extension QuestionViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        questions.removeAll()
-        print("searchText \(searchText)")
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
+        guard let questionsResponse = DatabaseManager.shared
+            .fetchQuestions(by: segmentControl.selectedSegmentIndex, searchText: searchText) else {
+                return
         }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Questions")
-        
-        
-        switch segmentControl.selectedSegmentIndex {
-        case 0:
-            request.predicate = NSPredicate(format: "tags CONTAINS %@", searchText.lowercased())
-        case 1:
-            request.predicate = NSPredicate(format: "display_name CONTAINS %@", searchText)
-        case 2:
-            request.predicate = NSPredicate(format: "title CONTAINS %@", searchText)
-        default:
-            break
-        }
-        
-        
-        request.returnsObjectsAsFaults = false
-        do {
-            let result = try managedContext.fetch(request)
-            for data in result as! [NSManagedObject] {
-                questions.append(Question(
-                    questionId: data.value(forKey: "question_id") as! Int,
-                    owner: Owner(displayName: data.value(forKey: "display_name") as! String,
-                                 profileImage: data.value(forKey: "profile_image") as! String),
-                    tags: (data.value(forKey: "tags") as! String).split(separator: ",").map(String.init),
-                    title: data.value(forKey: "title") as! String)
-                )
-                print(data.value(forKey: "title") as! String)
-                print(questions.count)
-            }
-            questionResponseTable.reloadData()
-            
-        } catch {
-            
-            print("Failed")
-        }
-        
+        questions = questionsResponse
+        questionResponseTable.reloadData()
     }
 }

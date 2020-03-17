@@ -19,6 +19,7 @@ class QuestionDetailViewController: UIViewController {
     
     var question: Question!
     var answers: [Answer]?
+    var userIdAuthor: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +30,17 @@ class QuestionDetailViewController: UIViewController {
         answerTableView.delegate   = self
         answerTableView.dataSource = self
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapOnAuthorAvatar))
+        avatarImage.addGestureRecognizer(tapGesture)
+        avatarImage.isUserInteractionEnabled = true
+        
         answerTableView.register(UINib.init(nibName: "AnswerCell", bundle: nil), forCellReuseIdentifier: "AnswerCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         nameLabel.text = question.owner.displayName
         tagsLabel.text = question.tags.joined(separator: ", ")
+        userIdAuthor   = question.owner.userId ?? 0
         questionLabel.text = question.title
         ImageLoader.shared.downloadImage(from: question.owner.profileImage, imageView: avatarImage)
         spinner.isHidden = false
@@ -82,6 +88,10 @@ extension QuestionDetailViewController: UITableViewDelegate, UITableViewDataSour
     
     func didTapOnAvatarImage(of userId: Int) {
         performSegue(withIdentifier: "to_profile_info", sender: userId)
+    }
+    
+    @objc func didTapOnAuthorAvatar() {
+        performSegue(withIdentifier: "to_profile_info", sender: userIdAuthor)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

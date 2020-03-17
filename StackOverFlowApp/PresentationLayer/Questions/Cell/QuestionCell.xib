@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Jzc-B9-Wz9">
-                        <rect key="frame" x="110" y="31" width="265" height="48.5"/>
+                        <rect key="frame" x="110" y="31" width="120" height="48.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mathew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCC-7N-lpc">
                                 <rect key="frame" x="0.0" y="0.0" width="66" height="25"/>
@@ -40,9 +40,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="OjN-yg-5nb"/>
+                        </constraints>
                     </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnX-gc-ntI">
-                        <rect key="frame" x="40" y="101" width="295" height="20.5"/>
+                        <rect key="frame" x="40" y="101" width="37" height="20.5"/>
                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -55,7 +58,7 @@
                     <constraint firstItem="SnX-gc-ntI" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-20" id="I6b-ht-Wgy"/>
                     <constraint firstItem="SnX-gc-ntI" firstAttribute="top" secondItem="NTe-gc-Gin" secondAttribute="bottom" constant="20" id="IoP-DA-4Vq"/>
                     <constraint firstItem="SnX-gc-ntI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="20" id="N3d-nF-zZo"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="Jzc-B9-Wz9" secondAttribute="trailing" constant="-20" id="ehg-LV-nXs"/>
+                    <constraint firstAttribute="trailing" secondItem="Jzc-B9-Wz9" secondAttribute="trailing" constant="20" symbolic="YES" id="RsF-ww-XVZ"/>
                     <constraint firstItem="Jzc-B9-Wz9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="zKt-ud-LwL"/>
                 </constraints>
             </tableViewCellContentView>

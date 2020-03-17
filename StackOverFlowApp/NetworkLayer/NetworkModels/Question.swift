@@ -20,7 +20,7 @@ struct Question: Codable {
 }
 
 struct Owner: Codable {
-//    var userId: Int16?
+    var userId: Int?
     var displayName: String
     var profileImage: String
 }

@@ -14,12 +14,9 @@ class ImageLoader {
     private init() {}
     
     func downloadImage(from urlString: String, imageView: UIImageView) {
-        print("Download Started")
         let url = URL(string: urlString)
         getData(from: url!) { data, response, error in
             guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url!.lastPathComponent)
-            print("Download Finished")
             DispatchQueue.main.async() {
                 imageView.image = UIImage(data: data)
             }

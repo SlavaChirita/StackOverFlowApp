@@ -206,8 +206,8 @@
             filePath = "StackOverFlowApp/PresentationLayer/Questions/Cell/QuestionCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "configure()"
             landmarkType = "7">
          </BreakpointContent>
@@ -311,22 +311,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "864EAB59-841B-4CFE-93E1-859A0AFDCF4A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StackOverFlowApp/PresentationLayer/Questions/QuestionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "searchBar(_:textDidChange:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "261273D7-936B-4BAE-9EC6-75EB00463696"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -334,8 +318,8 @@
             filePath = "StackOverFlowApp/PresentationLayer/Questions/QuestionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -350,24 +334,8 @@
             filePath = "StackOverFlowApp/PresentationLayer/Questions/QuestionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "searchBar(_:textDidChange:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "576E84E7-2615-4EF6-9579-007026B390D9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StackOverFlowApp/PresentationLayer/Questions/QuestionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -382,8 +350,8 @@
             filePath = "StackOverFlowApp/PresentationLayer/Questions/QuestionViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -418,38 +386,6 @@
             endingLineNumber = "43"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1A6CE5A9-E04D-4871-9F4B-0175C8EB9D49 - a5eff806e386d6cf"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "StackOverFlowApp.QuestionDetailViewController.viewWillAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "StackOverFlowApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/veaceslavchirita/Desktop/iOS%20Projects/StackOverFlowApp/StackOverFlowApp/PresentationLayer/QuestionDetail/QuestionDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "2692">
-               </Location>
-               <Location
-                  uuid = "1A6CE5A9-E04D-4871-9F4B-0175C8EB9D49 - f246fbe0c6d3b924"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;StackOverFlowApp.AnswerItems&gt;, Swift.Optional&lt;Swift.String&gt;) -&gt; () in StackOverFlowApp.QuestionDetailViewController.viewWillAppear(Swift.Bool) -&gt; ()"
-                  moduleName = "StackOverFlowApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/veaceslavchirita/Desktop/iOS%20Projects/StackOverFlowApp/StackOverFlowApp/PresentationLayer/QuestionDetail/QuestionDetailViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "205">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -465,22 +401,6 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "getAnswers(questionId:completed:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3445E94B-E04B-465A-8047-8118E3F61BAA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "StackOverFlowApp/PresentationLayer/Questions/QuestionViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -641,6 +561,22 @@
             startingLineNumber = "105"
             endingLineNumber = "105"
             landmarkName = "getUser(id:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "573F159B-1BE0-46C6-8631-25F45FFC51FE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "StackOverFlowApp/PresentationLayer/QuestionDetail/QuestionDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
